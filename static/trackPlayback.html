@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>地图</title>
+   <style type="text/css">
+   body{
+       width:100%;
+       margin:0px;
+       background-color:#FAFAFA;margin: 0px;padding:0px;font-size: 12px;
+   }
+   html, body, #allmap {
+   	height: 100%;
+       width: 100%;
+   }
+   body{
+	   margin:0;
+   }
+    #allmap{
+		margin:0;
+		height: calc(100vh - 50px);
+    }
+	/* div{width:95%;margin:10px auto;} */
+	.map-search{
+		position: fixed;
+		top:0;
+		left:0;
+		width:100%;
+		z-index: 99;
+		padding:10px;
+		box-sizing: border-box;
+		font-size:13px;
+		background: rgba(255,255,255,.6);
+	}
+	.map-search input{
+		border: 1px solid #e4e4e4;
+		padding: 4px 3px;
+		border-radius: 5px;
+	}
+	.map-search button{
+		background: #0075f9;
+		color: #fff;
+		border: 0;
+		height: 25px;
+		line-height: 25px;
+		border-radius: 3px;
+		margin-right: 3px;
+	}
+	#content{
+		position: fixed;
+		top:43px;
+		left:0;
+		width:100%;
+		z-index: 99;
+		opacity: .9;
+	}
+	.flex {
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flexbox;
+		display: flex;
+		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-webkit-box-lines: multiple;
+	}
+	.flex1 {
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		min-width: 0;
+	}
+    input {width:75px;margin-right:2px;}
+	#result-list{
+		width:100%;
+		padding:10px;
+		padding-left: 0;
+		padding-bottom: 0;
+		margin:0;
+		box-sizing: border-box;
+		overflow:hidden;} 
+	#result-list li {
+		padding-left: 10px;
+		height:76px;
+		margin-bottom: 10px;
+		/* margin:10px 2px; */
+		width:50%;
+		box-sizing: border-box;
+		float:left;
+		/*white-space:nowrap;*/
+		overflow:hidden;
+        }
+		#result-list li:nth-child(even){
+		}
+		#result-list li .inner{
+			padding:10px;
+			height: 100%;
+			background-color:#f1f2f4;
+		}
+		#result-list li span {display:none;}
+   </style>
+    <!--地图标注Js文件-->
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" ></script>
+<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=09AdclIzx4KKdYQYCYCtRRvHQQ1dDfSp"></script>
+   
+</head>
+<body>
+    <div class="map-search">
+		城市:<input type="text" id="txtCityName">关键字:<input type="text" id="txtTitle"><button onclick="search()">搜索</button><button onclick="closeWindow()">关闭</button></div> 
+		<div id="content" style="display:none;">
+			<div id="r-result" style="background:#fff;overflow:scroll;height: 200px; width: 100%;border:1px solid #ebeaba">
+			<ul id='result-list'></ul>
+		</div> 
+	</div>
+	<div id="allmap"></div>
+<script type="text/javascript">
+
+	var marker, lineArr = [], mapCenter = [], eventMarkers = [];
+	
+	//取url中的参数值
+	function getQuery(name) {
+		// 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+		let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		let r = window.location.search.substr(1).match(reg);
+		//console.log('getQuery'+ name + r);
+		if(r != null) {
+			// 对参数值进行解码
+			return decodeURIComponent(r[2]);
+		}
+		return null;
+	};
+	
+	let url = getQuery('url');
+	//let url = 'http://yapi.ikdo.com.cn/mock/47/patrol/query/geTrackDataByPatrolId/1425729261301256193';
+	let session = getQuery('session');
+	let center = getQuery('mapCenter').split(",");
+	url = decodeURI(url);
+	mapCenter = center;
+	console.log('--------'+ mapCenter);
+	
+
+
+	var myCity = new BMap.LocalCity();
+	
+	var map = new BMap.Map("allmap");
+	myCity.get(function (result) {
+		console.log(result);
+		//jQuery("#txtCityName").val(result.name);
+		//map.centerAndZoom(result.center, 18);
+		jQuery("#txtCityName").val('鹤壁市');
+		map.centerAndZoom('鹤壁市', 18);
+	});
+	map.enableScrollWheelZoom(true);
+	/*根据用户点击获得经纬度*/
+	map.addEventListener("click", function (e) {
+		console.log(e);
+		let addrInfo = e.point;
+	  // jQuery('#txtMapJing').val(addrInfo.lng);
+	   // jQuery('#txtMapWei').val(addrInfo.lat);
+		
+		
+	});
+	   function getQuery(name) {
+				  // 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+				  let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+				  let r = window.location.search.substr(1).match(reg);
+				  console.log(r);
+				  if(r != null) {
+					  // 对参数值进行解码
+					  return decodeURIComponent(r[2]);
+				  }
+				  return null;
+			  }
+	function  closeWindow()
+	{
+		jQuery("#content").hide();
+		/* window.parent.postMessage({close:"true"}, "*"); */
+	}
+	function search() {
+		let cityName=jQuery("#txtCityName").val();
+		var local = new BMap.LocalSearch(map, {
+			renderOptions: { map: map },
+			pageCapacity: 30,
+			
+			onMarkersSet: function (array) {
+			   // console.log(array[0]);
+				let arrLength = array.length;
+				str = '';
+				for (i = 0; i < arrLength; i++) {
+					str += '<li><div class="inner">标题：' + array[i].title + '<br/>地址：' + array[i].address;
+					if (typeof array[i].phoneNumber != 'undefined')
+					{
+						str += '<br/>电话：' + array[i].phoneNumber;
+					}
+					str += '</br><span>' + array[i].point.lng;
+					str += ',' + array[i].point.lat + '</span></div></li>';
+				}
+				jQuery("#content").show();
+				jQuery("#result-list").html(str);
+			
+				jQuery("#result-list li").bind('click', function () {
+					let addrInfo = jQuery(this).find('span').text().split(',');
+					window.parent.postMessage({test:{'lng':addrInfo[0],'lat':addrInfo[1]}}, "*");
+				   // jQuery('#txtMapJing').val(addrInfo[0]);
+				   // jQuery('#txtMapWei').val(addrInfo[1]);
+				   jQuery(this).parent().find('.inner').css('background-color', '#f1f2f4');
+					jQuery(this).find('.inner').css("background-color", '#eff4bc');
+					var point = new BMap.Point(addrInfo[0], addrInfo[1]);
+					map.centerAndZoom(point, 18);
+					
+					// 创建地址解析器实例
+					var myGeo = new BMap.Geocoder();
+					// 将地址解析结果显示在地图上,并调整地图视野
+					myGeo.getPoint("", function (point) {
+						if (point) {
+							map.centerAndZoom(point, 20);
+							map.addOverlay(new BMap.Marker(point));
+						} else {
+							alert("您选择地址没有解析到结果!");
+						}
+					}, cityName);
+					
+				});
+			}
+		});
+	 //   let Province = jQuery('#ddlProvince option:selected').text();
+	   // if (Province == '') { alert('请选择省'); }
+	   // let city = jQuery('#ddlCity option:selected').text();
+	  //  if (city == '') { alert('请选择城市'); }
+		let qh = jQuery('#txtTitle').val();
+		if (qh == '') { alert('请填写琴行名称'); }
+   
+		map.centerAndZoom(cityName, 15);
+		local.search(cityName+qh);
+	}
+</script>
+</body>
+</html>

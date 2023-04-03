@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2851225 */
+  src: url('@/static/font/iconfont.woff2?t=1633595041571') format('woff2'),
+       url('@/static/font/iconfont.woff?t=1633595041571') format('woff'),
+       url('@/static/font/iconfont.ttf?t=1633595041571') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menzhenjiaofei:before {
+  content: "\e67e";
+}
+
+.icon-wuyejiaofei:before {
+  content: "\e604";
+}
+
+.icon-xiaofei:before {
+  content: "\e62a";
+}
+
+.icon-fuwu1:before {
+  content: "\e70f";
+}
+
+.icon-jianshenfang:before {
+  content: "\e6d8";
+}
+
+.icon-fuwu:before {
+  content: "\e638";
+}
+
+.icon-jiaoyu:before {
+  content: "\e60e";
+}
+
+.icon-yiliaoweisheng:before {
+  content: "\e61c";
+}
+
+.icon-weibiaoti-_huabanfuben:before {
+  content: "\e61a";
+}
+
+.icon-mima:before {
+  content: "\e624";
+}
+
+.icon-shanchu:before {
+  content: "\e607";
+}
+
+.icon-zhanghao:before {
+  content: "\e60c";
+}
+
+.icon-bianji1:before {
+  content: "\e60a";
+}
+
+.icon-shanchu1:before {
+  content: "\e6d0";
+}
+
+.icon-weizhi:before {
+  content: "\e670";
+}
+
+.icon-gengduo1:before {
+  content: "\e6ce";
+}
+
+.icon-tongzhigonggao1:before {
+  content: "\e60b";
+}
+
+.icon-daibanshixiang:before {
+  content: "\e65d";
+}
+
+.icon-tuichu:before {
+  content: "\e605";
+}
+
+.icon-xingzhuang:before {
+  content: "\e612";
+}
+
+.icon-you:before {
+  content: "\e691";
+}
+
+.icon-tianjia1:before {
+  content: "\e6ab";
+}
+
+.icon-xinxi:before {
+  content: "\e654";
+}
+
+.icon-lu:before {
+  content: "\e60d";
+}
+
+.icon-banbengengxin:before {
+  content: "\e611";
+}
+
+.icon-ren:before {
+  content: "\e603";
+}
+
+.icon-bianji:before {
+  content: "\e630";
+}
+
+.icon-mima1:before {
+  content: "\e766";
+}
+
+.icon-dingwei:before {
+  content: "\e608";
+}
+
+.icon-qidian-copy:before {
+  content: "\e602";
+}
+
+.icon-zhongdian-copy-copy:before {
+  content: "\e609";
+}
+
+.icon-xiangshang:before {
+  content: "\e636";
+}
+
+.icon-xiangxia:before {
+  content: "\e637";
+}
+
+.icon-xuncha:before {
+  content: "\e772";
+}
+
+.icon-daibanshixiang1:before {
+  content: "\e771";
+}
+
+.icon-shipinjiankong:before {
+  content: "\e7d4";
+}
+
+.icon-shujufenxi:before {
+  content: "\e7d5";
+}
+
+.icon-wentishangbao:before {
+  content: "\e7d6";
+}
+
+.icon-daoluxuncha:before {
+  content: "\e7d7";
+}
+
+.icon-daoluxinxi:before {
+  content: "\e7d8";
+}
+
+.icon-tongxunlu:before {
+  content: "\e7d9";
+}
+
+.icon-guangxian:before {
+  content: "\e631";
+}
+

@@ -1,0 +1,6 @@
+.amap-logo, .amap-copyright{
+	display: none!important;
+}
+.amap-icon img{
+	width:34px;
+}

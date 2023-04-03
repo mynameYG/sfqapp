@@ -1,0 +1,122 @@
+@charset "utf-8";
+.form-body{
+	min-height: calc(100vh - 44px);
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	background: #FBFBFB;
+}
+.model-wrap{
+	padding: 0 15px;
+	border-radius: 8px;
+}
+.model-box {
+	background-color: #fff;
+	padding: 0 10px 2px;
+	margin-bottom: 15px;
+	border-radius: 3px;
+}
+.model-item {
+	padding: 15px 0px;
+	border-bottom: 1px solid #EEEEEE;
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+	.model-label{
+		font-size: 14px;
+		color: #333;
+		line-height: 24px;
+	}
+	.model-editText{
+		height: 24px;
+		padding: 0;
+		font-size: 14px;
+		color: #333;
+		line-height: 24px;
+		margin: 0 5px;
+		/deep/ uni-text + uni-text{
+			display: inline-block;
+			margin-left:5px;
+		}
+	}
+	.model-decorate{
+		.iconfont {
+			font-size: 14px;
+			color: #909090;
+			line-height: 24px;
+		}
+	}
+	.gray-place {
+		color: gray;
+	}
+	
+	.model-textarea{
+		overflow-y: auto;
+		width: 100%;
+		max-height: 70px;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	/deep/ uni-textarea.model-textarea{
+		width: 100%;
+		height: 70px;
+		font-size: 14px;
+		line-height: 24px;
+		.uni-textarea-wrapper,.uni-textarea-placeholder{
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+	/deep/ .uni-textarea-textarea {
+		font-size: 14px;
+		color: #333;
+		line-height: 24px;
+		margin-bottom: 0;
+	}
+		
+	input {
+		font-size: 14px;
+	}
+	
+}
+.model-textarea-box{
+	max-height: 48px;
+	overflow-y: auto;
+	textarea{
+		width: 100%;
+	}
+}
+.submit-wrap {
+	width: 100%;
+	padding: 15px;
+	.tj {
+		width: 100%;
+		height: 40px;
+		background-color: #2C80FB;
+		border-radius: 5px;
+		font-size: 14px;
+		color: #fff;
+		line-height: 40px;
+		padding: 0 !important;
+		border: none;
+	}
+}
+.fixed-btn{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 9;
+}
+.file-border {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #eeeeee;
+	text-align: center;
+	.icon-tianjia1 {
+		font-size: 14px;
+		color: #bfbfbf;
+		line-height: 30px;
+	}
+}

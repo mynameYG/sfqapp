@@ -1,0 +1,71 @@
+.detail-wrap {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2upx 8upx rgba(0, 0, 0, 0.06); }
+  .detail-wrap .detail-item .detail-label {
+    display: inline-block;
+    line-height: 26px;
+    margin-right: 10px;
+    min-width: 30px;
+    font-size: 14px;
+    color: #777; }
+  .detail-wrap .detail-item .detail-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 26px; }
+    .detail-wrap .detail-item .detail-text /deep/ uni-text + uni-text {
+      margin-left: 5px; }
+    .detail-wrap .detail-item .detail-text .iconfont {
+      color: #ddd; }
+    .detail-wrap .detail-item .detail-text .icon-xuanzhong {
+      color: #FFC200; }
+  .detail-wrap .detail-btn {
+    max-width: 100%;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 0 10px;
+    line-height: 26px;
+    border: 1px solid #2C80FB;
+    color: #2C80FB;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px; }
+    .detail-wrap .detail-btn .btn-item {
+      display: inline-block; }
+    .detail-wrap .detail-btn .btn-item + .btn-item {
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid #2C80FB; }
+  .detail-wrap .detail-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden; }
+    .detail-wrap .detail-badge image {
+      width: 100%;
+      height: 100%; }
+  .detail-wrap .textarea-auto {
+    max-height: 72px;
+    overflow-y: auto; }
+
+.detail-title {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600; }
+  .detail-title .time {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500; }
+
+.title {
+  font-size: 15px;
+  font-weight: 600; }
+
+.title-model {
+  display: inline-block; }

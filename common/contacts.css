@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*显示与隐藏*/
+.hide {
+  display: none !important; }
+
+.contact {
+  padding-bottom: 50px; }
+
+.contacts-biglist {
+  width: 100%; }
+
+.contacts-biglink {
+  height: 54px;
+  padding: 9px 10px;
+  border-bottom: 1px solid #EEEEEE; }
+
+.contacts-bigleft {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center; }
+
+.contacts-bigmid {
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+  margin-bottom: 0; }
+
+.contacts-bigright {
+  display: inline-block;
+  width: 40px;
+  margin-left: 30px;
+  text-align: right;
+  font-size: 16px;
+  color: #BFBFBF;
+  line-height: 20px; }
+
+.contacts-smalllink {
+  border-bottom: 1px solid #FBFBFB;
+  padding: 9px 15px;
+  background-color: #fff; }
+
+.contacts-smallleft {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden; }
+
+.contacts-smallmid .contacts-smallname {
+  font-size: 14px;
+  color: #333;
+  line-height: 22px;
+  margin-bottom: 0; }
+
+.contacts-smallxi {
+  font-size: 12px;
+  color: #999;
+  line-height: 22px;
+  margin-bottom: 0; }

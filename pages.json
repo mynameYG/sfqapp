@@ -1,0 +1,278 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://unijh]l]u]app.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/map/map",
+			"style": {
+				"navigationBarTitleText": "地图",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/service-index",
+			"style": {
+				"navigationBarTitleText": "服务",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/property",
+			"style": {
+				"navigationBarTitleText": "物业服务",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/property-zs",
+			"style": {
+				"navigationBarTitleText": "物业展示",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/repair-index",
+			"style": {
+				"navigationBarTitleText": "报修列表",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/repair-add",
+			"style": {
+				"navigationBarTitleText": "报修",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/repair-detail",
+			"style": {
+				"navigationBarTitleText": "报修详情",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/repair-close",
+			"style": {
+				"navigationBarTitleText": "关闭报修",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/property-cost",
+			"style": {
+				"navigationBarTitleText": "物业费",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/vote",
+			"style": {
+				"navigationBarTitleText": "在线投票",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/vote-detail",
+			"style": {
+				"navigationBarTitleText": "投票详情",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/service/clapper",
+			"style": {
+				"navigationBarTitleText": "上报问题",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/street-list",
+			"style": {
+				"navigationBarTitleText": "选择所属区域",
+				"app-plus": {
+					"titleNView": {
+						"autoBackButton": "false",
+						"titleSize": "17px",
+						"buttons": [{
+							"float": "left",
+							"text": "取消",
+							"fontSize": "17px",
+							"color": "#fff",
+							"width": "60px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/street-list-list",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/street-list-list-list",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+		
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/contacts/street-list-popup",
+			"style": {
+				"navigationBarTitleText": "已选择",
+				"app-plus": {
+					"animationType": "slide-in-bottom",
+					"titleNView": {
+						"autoBackButton": "false",
+						"titleSize": "17px",
+						"buttons": [{
+							"float": "left",
+							"text": "清空",
+							"fontSize": "17px",
+							"color": "#FF0000",
+							"width": "60px"
+						}, {
+							"float": "right",
+							"text": "关闭",
+							"fontSize": "17px",
+							"color": "#fff",
+							"width": "60px"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/my/password",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"app-plus": {
+					"titleNView": {
+						"titleSize": "17px"
+					}
+				}
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#0075F9",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/map/map",
+			"iconPath": "/static/img/tab-home.png",
+			"selectedIconPath": "/static/img/tab-home-active.png",
+			"text": "地图"
+		},
+		{
+			"pagePath": "pages/service/service-index",
+			"iconPath": "/static/img/tab-patrol.png",
+			"selectedIconPath": "/static/img/tab-patrol-active.png",
+			"text": "服务"
+		},{
+			"pagePath": "pages/my/my",
+			"iconPath": "/static/img/tab-my.png",
+			"selectedIconPath": "/static/img/tab-my-active.png",
+			"text": "我的"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#0075F9",
+		"backgroundColor": "#0075F9"
+	}
+}
